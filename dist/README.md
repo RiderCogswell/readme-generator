@@ -1,5 +1,5 @@
 
-  # r
+  # d
 
   ## Description
   d
@@ -18,11 +18,11 @@
   d
 
   ## Contributing
-  d
+  * r
 
   ## Tests
-  d
+  r
 
   ## Questions
-[GitHub](https://github.com/RiderCogswell)  
-[Email Me!](mailto:ridercogswell@gmail.com)
+[GitHub](https://github.com/Yobiz)  
+[Email Me!](mailto:d)

@@ -93,7 +93,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Enter license:',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         when: ({ confirmLicense }) => {
             if (confirmLicense) {
                 return true;
@@ -104,7 +104,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contributing',
+        name: 'contributors',
         message: 'Enter all contributors of this application:',
         validate: contribInp => {
             if (contribInp) {
@@ -123,7 +123,7 @@ const questions = [
             if (testInp) {
                 return true;
             } else {
-                console.log('Please enter a testing information!');
+                console.log('Please enter all testing information!');
                 return false;
             }
         }

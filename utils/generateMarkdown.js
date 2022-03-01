@@ -23,11 +23,7 @@ const renderLicenseLink = license => {
 const renderLicenseSection = license => {
   if (!license) {
     return '';
-
-
   };
-
-
 };
 
 // TODO: Create a function to generate markdown for README
@@ -52,7 +48,7 @@ const generateMarkdown = data => {
   ${data.usage}
 
   ## Contributing
-  ${data.contributing}
+  * ${data.contributors}
 
   ## Tests
   ${data.tests}

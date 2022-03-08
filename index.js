@@ -93,7 +93,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Enter license:',
-        choices: ['MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['MIT License', 'Boost Software License 1.0', 'The Unlicense', 'None'],
         when: ({ confirmLicense }) => {
             if (confirmLicense) {
                 return true;

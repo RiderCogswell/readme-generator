@@ -1,33 +1,20 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-const renderLicenseBadge = license => {
-  if (!license) {
-    return '';
-  };
-
-
-};
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-const renderLicenseLink = license => {
-  if (!license) {
-    return '';
-  };
-
-
-};
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-const renderLicenseSection = license => {
-  if (!license) {
-    return '';
-  };
-};
-
-// TODO: Create a function to generate markdown for README
+// generate markdown for README
 const generateMarkdown = data => {
+  // empty license
+  let licenseOption = `${data.license}`;
+  let licenseLink = '';
+
+  // conditionals for license choice
+  if (licenseOption === 'MIT License') {
+    licenseLink = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+  } else if (licenseOption === 'Boost Software License 1.0') {
+    licenseLink = '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+  } else if (licenseOption === 'The Unlicense') {
+    licenseLink = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+  } else if (licenseOption === 'None') {
+    licenseLink = 'below'
+  };
+
   return `
   # ${data.title}
 
@@ -39,6 +26,7 @@ const generateMarkdown = data => {
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Tests](#tests)
+  - [License](#license)
   - [Questions](#tests)
 
   ## Installation
@@ -53,10 +41,15 @@ const generateMarkdown = data => {
   ## Tests
   ${data.tests}
 
+  ## License
+  This project is licensed under the ${data.license} 
+
+  For more information click ${licenseLink}
+
   ## Questions
-[GitHub](https://github.com/${data.github})  
-[Email Me!](mailto:${data.email})
-`;
+  [GitHub](https://github.com/${data.github})  
+  [Email Me!](mailto:${data.email})
+  `;
 };
 
 module.exports = generateMarkdown;
